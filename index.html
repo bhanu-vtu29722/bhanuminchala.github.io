@@ -1,30 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bhanu's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bhanu Prakash | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+header{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1e293b;
+}
+
+.about{
+    text-align:center;
+    line-height:1.8;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.project-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+.project-card a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    background:#1e293b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to My Portfolio</h1>
 
-    <h2>About Me</h2>
-    <p>I am a Computer Science student.</p>
+<header>
+    <h1>Bhanu Prakash</h1>
+    <p>Computer Science Student | Java Developer | Problem Solver</p>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>C</li>
-        <li>Python</li>
-        <li>SQL</li>
-    </ul>
+    <a href="resume.pdf" class="btn" target="_blank">
+        Download Resume
+    </a>
+</header>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>Student Management System</li>
-        <li>Prim's Algorithm Implementation</li>
-        <li>Data Visualization Project</li>
-    </ul>
+<section>
+    <h2 class="section-title">About Me</h2>
 
-    <h2>Contact</h2>
-    <p>Email: yourmail@example.com</p>
+    <div class="about">
+        <p>
+            I am a Computer Science student passionate about software
+            development, data structures, algorithms, and web technologies.
+            I enjoy building efficient solutions and continuously improving
+            my programming skills.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill-card">Java</div>
+        <div class="skill-card">C</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Git & GitHub</div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p>
+                Java-based application for managing student records.
+            </p>
+            <br>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Data Visualization Project</h3>
+            <p>
+                Interactive visualizations for data analysis and insights.
+            </p>
+            <br>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Prim's Algorithm</h3>
+            <p>
+                Efficient graph implementation using adjacency matrix.
+            </p>
+            <br>
+            <a href="#">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Education</h2>
+
+    <div class="about">
+        <p><strong>B.E. Computer Science Engineering</strong></p>
+        <p>VTU University</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact">
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: github.com/bhanu-vtu29722</p>
+        <p>LinkedIn: linkedin.com/in/your-profile</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Bhanu Prakash. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
