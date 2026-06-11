@@ -3,61 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhanu Prakash Minchala | Portfolio</title>
 
-<title>Bhanu Prakash | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f6f9;
-    color:#333;
-}
-
-header{
-    background:#1e293b;
+    background:#0f172a;
     color:white;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#111827;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
+    padding:80px 20px;
 }
 
-header h1{
+.hero-content img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+}
+
+.hero h1{
     font-size:3rem;
+    margin-top:20px;
 }
 
-header p{
-    margin-top:10px;
-    font-size:1.2rem;
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#cbd5e1;
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    padding:12px 24px;
-    background:#2563eb;
-    color:white;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#000;
     text-decoration:none;
-    border-radius:5px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
 section{
-    padding:60px 10%;
+    padding:80px 10%;
 }
 
-.section-title{
+.title{
     text-align:center;
-    margin-bottom:30px;
-    color:#1e293b;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:#38bdf8;
 }
 
 .about{
     text-align:center;
     line-height:1.8;
+    color:#cbd5e1;
 }
 
 .skills{
@@ -66,147 +116,274 @@ section{
     gap:20px;
 }
 
-.skill-card{
-    background:white;
+.skill{
+    background:#1e293b;
     padding:20px;
     text-align:center;
     border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition:.3s;
 }
 
-.projects{
+.skill:hover{
+    transform:translateY(-5px);
+}
+
+.cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
-.project-card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
 }
 
-.project-card h3{
+.card h3{
+    color:#38bdf8;
     margin-bottom:10px;
 }
 
-.project-card a{
+.card a{
+    color:#38bdf8;
     text-decoration:none;
-    color:#2563eb;
-    font-weight:bold;
+}
+
+.education{
+    text-align:center;
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
 }
 
 .contact{
     text-align:center;
 }
 
+.contact p{
+    margin:10px 0;
+}
+
 footer{
-    background:#1e293b;
-    color:white;
     text-align:center;
     padding:20px;
+    background:#111827;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Bhanu Prakash</h1>
-    <p>Computer Science Student | Java Developer | Problem Solver</p>
+<nav>
+    <h2>Bhanu</h2>
 
-    <a href="resume.pdf" class="btn" target="_blank">
-        Download Resume
-    </a>
-</header>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-<section>
-    <h2 class="section-title">About Me</h2>
+<section class="hero">
 
-    <div class="about">
-        <p>
-            I am a Computer Science student passionate about software
-            development, data structures, algorithms, and web technologies.
-            I enjoy building efficient solutions and continuously improving
-            my programming skills.
-        </p>
-    </div>
+<div class="hero-content">
+
+<img src="profile.jpg" alt="Bhanu">
+
+<h1>Hi, I'm <span>Bhanu Prakash</span></h1>
+
+<p>
+Computer Science Engineering Student |
+Java Developer |
+Problem Solver
+</p>
+
+<a href="resume.pdf" class="btn" target="_blank">
+Download Resume
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<p>
+I am a Computer Science Engineering student passionate about
+software development, data structures, algorithms, and modern web
+technologies. I enjoy solving coding challenges and building
+real-world applications using Java, Python, SQL, and Web Development.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Java</div>
+<div class="skill">C</div>
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">DSA</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Student Management System</h3>
+
+<p>
+Java-based application for managing student records,
+attendance, and academic information.
+</p>
+
+<br>
+
+<a href="#">
+View Project
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Smart Irrigation System</h3>
+
+<p>
+Hardware project using Arduino and soil moisture sensors
+to automate irrigation.
+</p>
+
+<br>
+
+<a href="#">
+Project Details
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section>
-    <h2 class="section-title">Skills</h2>
 
-    <div class="skills">
+<h2 class="title">Certifications</h2>
 
-        <div class="skill-card">Java</div>
-        <div class="skill-card">C</div>
-        <div class="skill-card">Python</div>
-        <div class="skill-card">SQL</div>
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Git & GitHub</div>
+<div class="cards">
 
-    </div>
+<div class="card">
+Java Programming Certification
+</div>
+
+<div class="card">
+Python Programming Certification
+</div>
+
+<div class="card">
+SQL Fundamentals
+</div>
+
+</div>
+
 </section>
 
-<section>
-    <h2 class="section-title">Projects</h2>
+<section id="education">
 
-    <div class="projects">
+<h2 class="title">Education</h2>
 
-        <div class="project-card">
-            <h3>Student Management System</h3>
-            <p>
-                Java-based application for managing student records.
-            </p>
-            <br>
-            <a href="#">View Project</a>
-        </div>
+<div class="education">
 
-        <div class="project-card">
-            <h3>Data Visualization Project</h3>
-            <p>
-                Interactive visualizations for data analysis and insights.
-            </p>
-            <br>
-            <a href="#">View Project</a>
-        </div>
+<h3>B.E / B.Tech Computer Science Engineering</h3>
 
-        <div class="project-card">
-            <h3>Prim's Algorithm</h3>
-            <p>
-                Efficient graph implementation using adjacency matrix.
-            </p>
-            <br>
-            <a href="#">View Project</a>
-        </div>
+<p>XYZ Institute of Technology</p>
 
-    </div>
+<p>Graduation Year: 2027</p>
+
+<p>CGPA: 8.5 / 10</p>
+
+</div>
+
 </section>
 
-<section>
-    <h2 class="section-title">Education</h2>
+<section id="contact">
 
-    <div class="about">
-        <p><strong>B.E. Computer Science Engineering</strong></p>
-        <p>VTU University</p>
-    </div>
-</section>
+<h2 class="title">Contact</h2>
 
-<section>
-    <h2 class="section-title">Contact</h2>
+<div class="contact">
 
-    <div class="contact">
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/bhanu-vtu29722</p>
-        <p>LinkedIn: linkedin.com/in/your-profile</p>
-    </div>
+<p>📧 Email: minchalabhanu123@gmail.com</p>
+
+<p>
+🐙 GitHub:
+<a href="https://github.com/bhanu-vtu29722">
+github.com/bhanu-vtu29722
+</a>
+</p>
+
+<p>
+💼 LinkedIn:
+<a href="#">
+linkedin.com/in/yourprofile
+</a>
+</p>
+
+<p>
+🏆 LeetCode:
+<a href="#">
+leetcode.com/yourprofile
+</a>
+</p>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Bhanu Prakash. All Rights Reserved.</p>
+© 2026 Bhanu Prakash Minchala | All Rights Reserved
 </footer>
 
 </body>
